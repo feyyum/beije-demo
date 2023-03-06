@@ -1,13 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import styles from './Home.style';
+import Text from '../../components/Text';
 
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.content_container}>
+        <Text style={styles.title}>Kendi Paketini Oluştur</Text>
+        <Text style={styles.desc}>
+          Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve miktarlardan, sana özel bir
+          paket oluşturalım.
+        </Text>
+      </View>
+    </ScrollView>
   );
 }

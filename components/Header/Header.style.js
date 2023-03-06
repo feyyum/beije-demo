@@ -5,24 +5,23 @@ import { getHeight, getWidth } from '../../constants/Spaces';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: Palette.yellow,
+    height: getHeight(64),
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingHorizontal: getWidth(24),
   },
-  content_container: {
-    paddingVertical: getHeight(32),
+  button_container: {
+    position: 'absolute',
+    width: '100%',
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  title: {
-    fontSize: 28,
-    lineHeight: 36.4,
-    fontWeight: 500,
+  back_button: {
     color: Palette.black_secondary,
-    marginBottom: getHeight(24),
-  },
-  desc: {
     fontSize: 16,
-    lineHeight: 26,
-    fontWeight: 300,
+    fontWeight: 500,
   },
 });
 

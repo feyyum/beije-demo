@@ -13,16 +13,15 @@ const styles = StyleSheet.create({
     paddingVertical: getHeight(32),
   },
   title: {
+    fontFamily: 'Gordita-Medium',
     fontSize: 28,
     lineHeight: 36.4,
-    fontWeight: 500,
     color: Palette.black_secondary,
     marginBottom: getHeight(24),
   },
   desc: {
     fontSize: 16,
     lineHeight: 26,
-    fontWeight: 300,
   },
 });
 

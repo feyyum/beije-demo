@@ -8,4 +8,5 @@ export const Palette = {
   black: '#000000',
   black_secondary: '#333131',
   yellow: '#F8F5F2',
+  gray: '#CCCCCC',
 };

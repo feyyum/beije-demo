@@ -5,7 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useCallback } from 'react';
 import { StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 
 import { Palette } from './constants/Colors';
@@ -18,6 +18,19 @@ export default function App() {
   */
   const [fontsLoaded] = useFonts({
     'Gordita-Regular': require('./assets/fonts/GorditaRegular.otf'),
+    'Gordita-Regular-Italic': require('./assets/fonts/GorditaRegularItalic.otf'),
+    'Gordita-Black': require('./assets/fonts/GorditaBlack.otf'),
+    'Gordita-Black-Italic': require('./assets/fonts/GorditaBlackItalic.otf'),
+    'Gordita-Bold': require('./assets/fonts/GorditaBold.otf'),
+    'Gordita-Bold-Italic': require('./assets/fonts/GorditaBoldItalic.otf'),
+    'Gordita-Light': require('./assets/fonts/GorditaLight.otf'),
+    'Gordita-Light-Italic': require('./assets/fonts/GorditaLightItalic.otf'),
+    'Gordita-Medium': require('./assets/fonts/GorditaMedium.otf'),
+    'Gordita-Medium-Italic': require('./assets/fonts/GorditaMediumItalic.otf'),
+    'Gordita-Thin': require('./assets/fonts/GorditaThin.otf'),
+    'Gordita-Thin-Italic': require('./assets/fonts/GorditaThinItalic.otf'),
+    'Gordita-Ultra': require('./assets/fonts/GorditaUltra.otf'),
+    'Gordita-Ultra-Italic': require('./assets/fonts/GorditaUltraItalic.otf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -32,12 +45,14 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
-        <StatusBar style="dark" />
-        <NavigationContainer>
-          <MainStack />
-        </NavigationContainer>
-      </SafeAreaView>
+      <SafeAreaProvider>
+        <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
+          <StatusBar style="dark" />
+          <NavigationContainer>
+            <MainStack />
+          </NavigationContainer>
+        </SafeAreaView>
+      </SafeAreaProvider>
     </Provider>
   );
 }

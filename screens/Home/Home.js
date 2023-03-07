@@ -1,6 +1,7 @@
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, Button, Platform } from 'react-native';
 
 import styles from './Home.style';
+import ProductTabView from '../../components/ProductTabView';
 import Text from '../../components/Text';
 
 export default function Home() {
@@ -12,6 +13,9 @@ export default function Home() {
           Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve miktarlardan, sana özel bir
           paket oluşturalım.
         </Text>
+      </View>
+      <View style={{ height: Platform.OS === 'ios' ? 520 : 448 }}>
+        <ProductTabView />
       </View>
     </ScrollView>
   );

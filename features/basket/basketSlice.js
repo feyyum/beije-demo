@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// This slice just for the displaying basket item number on basket icon
+// This slice is just for the displaying basket item number on basket icon
 export const basketSlice = createSlice({
   name: 'basket',
   initialState: {

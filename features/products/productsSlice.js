@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import Products from '../../constants/Products';
 
+// These function creates initial state from constants/Products.js
 function initializeObject() {
   let products = {};
   // Mapping products and takes category names

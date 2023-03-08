@@ -20,7 +20,6 @@ export default function ProductsModal({ modalVisible, setModalVisible }) {
   const insets = useSafeAreaInsets();
 
   const products = useSelector((state) => state.products);
-  const basket_count = useSelector((state) => state.basket.count);
 
   const dispatch = useDispatch();
 
@@ -128,7 +127,6 @@ export default function ProductsModal({ modalVisible, setModalVisible }) {
                 dispatch(resetProducts());
                 setModalVisible(!modalVisible);
                 dispatch(addBasket());
-                console.log(basket_count);
               }}
             />
           </View>

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { View, ScrollView, Platform } from 'react-native';
-import { useSelector } from 'react-redux';
 
 import styles from './Home.style';
 import Button from '../../components/Button';

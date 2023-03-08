@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
   },
+  button_container: {
+    marginBottom: 40,
+  },
 });
 
 export default styles;

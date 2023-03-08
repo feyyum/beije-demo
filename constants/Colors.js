@@ -9,4 +9,5 @@ export const Palette = {
   black_secondary: '#333131',
   yellow: '#F8F5F2',
   gray: '#CCCCCC',
+  green: '#457B3B',
 };

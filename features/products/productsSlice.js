@@ -22,7 +22,6 @@ function initializeObject() {
     // Joins these two object
     products = { ...products, ...obj };
   });
-  console.log(products);
   return products;
 }
 
@@ -30,6 +29,15 @@ export const productsSlice = createSlice({
   name: 'products',
   initialState: initializeObject(),
   reducers: {
+    resetProducts: (state) => {
+      state.PAD['STANDARD'].amount = 0;
+      state.PAD['SUPER'].amount = 0;
+      state.PAD['SUPERPLUS'].amount = 0;
+      state.DAILYPAD['DAILY'].amount = 0;
+      state.DAILYPAD['SUPERDAILY'].amount = 0;
+      state.TAMPON['MINI'].amount = 0;
+      state.TAMPON['STANDARD'].amount = 0;
+    },
     setPad: (state, action) => {
       switch (action.payload.type) {
         case 'STANDARD':
@@ -79,7 +87,14 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { setPad, setDailyPad, setTampon, resetPad, resetDailyPad, resetTampon } =
-  productsSlice.actions;
+export const {
+  setPad,
+  setDailyPad,
+  setTampon,
+  resetPad,
+  resetDailyPad,
+  resetTampon,
+  resetProducts,
+} = productsSlice.actions;
 
 export default productsSlice.reducer;

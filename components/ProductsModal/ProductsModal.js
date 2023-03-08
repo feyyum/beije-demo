@@ -1,10 +1,15 @@
-import { useState } from 'react';
 import { View, Modal, ScrollView, Pressable, Platform, Image } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './ProductsModal.style';
-import { resetPad, resetDailyPad, resetTampon } from '../../features/products/productsSlice';
+import { addBasket } from '../../features/basket/basketSlice';
+import {
+  resetPad,
+  resetDailyPad,
+  resetTampon,
+  resetProducts,
+} from '../../features/products/productsSlice';
 import Button from '../Button/Button';
 import Cancel from '../Cancel';
 import Cycle from '../Cycle';
@@ -15,6 +20,7 @@ export default function ProductsModal({ modalVisible, setModalVisible }) {
   const insets = useSafeAreaInsets();
 
   const products = useSelector((state) => state.products);
+  const basket_count = useSelector((state) => state.basket.count);
 
   const dispatch = useDispatch();
 
@@ -118,6 +124,12 @@ export default function ProductsModal({ modalVisible, setModalVisible }) {
                 ...Object.entries(products['TAMPON']).filter((item) => item[1].amount > 0),
               ])})`}
               disabled={!isFilled('PAD') && !isFilled('DAILYPAD') && !isFilled('TAMPON')}
+              onPress={() => {
+                dispatch(resetProducts());
+                setModalVisible(!modalVisible);
+                dispatch(addBasket());
+                console.log(basket_count);
+              }}
             />
           </View>
         </ScrollView>

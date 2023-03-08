@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { View, ScrollView, Platform } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import styles from './Home.style';
 import Button from '../../components/Button';
@@ -8,7 +9,7 @@ import ProductsModal from '../../components/ProductsModal';
 import Text from '../../components/Text';
 
 export default function Home() {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <ScrollView style={styles.container}>

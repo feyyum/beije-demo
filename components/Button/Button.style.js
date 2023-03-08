@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     lineHeight: 24,
   },
+
+  disabled_button: {
+    backgroundColor: Palette.gray,
+  },
 });
 
 export default styles;

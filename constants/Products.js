@@ -1,7 +1,7 @@
 const Products = [
   {
     category: 'PAD',
-    screen_name: 'beije Ped',
+    screen_name: 'Ped',
     models: [
       {
         name: 'STANDARD',
@@ -25,7 +25,7 @@ const Products = [
   },
   {
     category: 'DAILYPAD',
-    screen_name: 'beije Günlük Ped',
+    screen_name: 'Günlük Ped',
     models: [
       {
         name: 'DAILY',
@@ -43,7 +43,7 @@ const Products = [
   },
   {
     category: 'TAMPON',
-    screen_name: 'beije Tampon',
+    screen_name: 'Tampon',
     models: [
       {
         name: 'MINI',

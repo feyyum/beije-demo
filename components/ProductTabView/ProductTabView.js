@@ -22,7 +22,7 @@ const PadScreen = () => {
           type={item.name}
           setFunc={setPad}
           dispatch={dispatch}
-          count={counts[item.name]}
+          count={counts[item.name].amount}
         />
       ))}
     </View>
@@ -43,7 +43,7 @@ const DailyPadScreen = () => {
           type={item.name}
           setFunc={setDailyPad}
           dispatch={dispatch}
-          count={counts[item.name]}
+          count={counts[item.name].amount}
         />
       ))}
     </View>
@@ -64,7 +64,7 @@ const TamponScreen = () => {
           type={item.name}
           setFunc={setTampon}
           dispatch={dispatch}
-          count={counts[item.name]}
+          count={counts[item.name].amount}
         />
       ))}
     </View>
@@ -81,9 +81,10 @@ const renderTabBar = (props) => (
   <TabBar
     {...props}
     indicatorStyle={{ backgroundColor: Palette.black_secondary }}
-    style={{ backgroundColor: Palette.yellow }}
+    style={{ backgroundColor: Palette.yellow, shadowColor: Palette.white }}
     activeColor={Palette.black}
     inactiveColor={Palette.black_secondary}
+    pressColor={Palette.gray}
     labelStyle={{
       textTransform: 'none',
       textAlign: 'center',

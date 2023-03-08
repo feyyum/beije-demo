@@ -54,6 +54,14 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
   },
+  card_container: {
+    marginHorizontal: getWidth(24),
+  },
+  button_container: {
+    marginHorizontal: getWidth(24),
+    marginTop: 12,
+    marginBottom: 32,
+  },
 });
 
 export default styles;

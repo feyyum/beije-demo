@@ -12,7 +12,11 @@ function initializeObject() {
     const models = {};
     // Mapping models and takes model names of specific product
     Products[i].models.forEach((model) => {
-      models[model.name] = 0;
+      models[model.name] = {
+        amount: 0,
+        screen_name: model.screen_name,
+        price: model.price,
+      };
     });
     obj[product.category] = models;
     // Joins these two object
@@ -29,39 +33,53 @@ export const productsSlice = createSlice({
     setPad: (state, action) => {
       switch (action.payload.type) {
         case 'STANDARD':
-          state.PAD['STANDARD'] = action.payload.amount;
+          state.PAD['STANDARD'].amount = action.payload.amount;
           break;
         case 'SUPER':
-          state.PAD['SUPER'] = action.payload.amount;
+          state.PAD['SUPER'].amount = action.payload.amount;
           break;
         case 'SUPERPLUS':
-          state.PAD['SUPERPLUS'] = action.payload.amount;
+          state.PAD['SUPERPLUS'].amount = action.payload.amount;
           break;
       }
+    },
+    resetPad: (state) => {
+      state.PAD['STANDARD'].amount = 0;
+      state.PAD['SUPER'].amount = 0;
+      state.PAD['SUPERPLUS'].amount = 0;
     },
     setDailyPad: (state, action) => {
       switch (action.payload.type) {
         case 'DAILY':
-          state.DAILYPAD['DAILY'] = action.payload.amount;
+          state.DAILYPAD['DAILY'].amount = action.payload.amount;
           break;
         case 'SUPERDAILY':
-          state.DAILYPAD['SUPERDAILY'] = action.payload.amount;
+          state.DAILYPAD['SUPERDAILY'].amount = action.payload.amount;
           break;
       }
+    },
+    resetDailyPad: (state) => {
+      state.DAILYPAD['DAILY'].amount = 0;
+      state.DAILYPAD['SUPERDAILY'].amount = 0;
     },
     setTampon: (state, action) => {
       switch (action.payload.type) {
         case 'MINI':
-          state.TAMPON['MINI'] = action.payload.amount;
+          state.TAMPON['MINI'].amount = action.payload.amount;
           break;
         case 'STANDARD':
-          state.TAMPON['STANDARD'] = action.payload.amount;
+          state.TAMPON['STANDARD'].amount = action.payload.amount;
           break;
       }
+    },
+    resetTampon: (state) => {
+      state.TAMPON['MINI'].amount = 0;
+      state.TAMPON['STANDARD'].amount = 0;
     },
   },
 });
 
-export const { setPad, setDailyPad, setTampon } = productsSlice.actions;
+export const { setPad, setDailyPad, setTampon, resetPad, resetDailyPad, resetTampon } =
+  productsSlice.actions;
 
 export default productsSlice.reducer;

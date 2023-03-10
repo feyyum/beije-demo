@@ -15,3 +15,7 @@ Expo kullanmak her ne kadar demo projenin geliştirme ve test aşamasında çok 
 - Son olarak yapmaktan pişman olduğum bir redux initial state yapısı kurdum. Bazı iterasyonlar çok zorlaştı, modülerlik bazı noktalarda bozuldu ve olası performans sorunları ihtimaline yol açtı. Ancak daha önce de bahsettiğim gibi teslim süresinin uzaması da benim için büyük bir baskı oluşturuyordu. Kaliteli kod ile zaman baskısı arasında gerekli önceliklendirmeyi yaparak dengeyi sağlamaya çalıştım. Ek olarak Chat-GPT ile olası performans sorunlarının çözümlerine erişmeye çalıştım.
 
 Teşekkürler.
+
+EDIT 10.03.22:
+Tested on iPhone 14 - 14 Pro - 14 Plus - 14 Pro Max iOS 16.2
+Tested on Android API 31

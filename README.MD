@@ -18,4 +18,4 @@ Teşekkürler.
 
 EDIT 10.03.22:
 Tested on iPhone 14 - 14 Pro - 14 Plus - 14 Pro Max iOS 16.2
-Tested on Android API 31
+Tested on Google Pixel 6 Android API 31

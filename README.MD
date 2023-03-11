@@ -4,6 +4,8 @@ Beije Software Developer Internship için yapılan case çalışmasıdır. Expo 
 
 Çalıştırmak için [Expo Installation](https://docs.expo.dev/get-started/installation/) sayfasındaki gereklilikler sağlanmış olmalıdır. Sonrasında ise `npx expo start` komutu ile proje dizininde çalıştırılabilir.
 
+[![Preview Video](https://img.youtube.com/vi/A_chwOd5XsI/0.jpg)](https://www.youtube.com/watch?v=A_chwOd5XsI)
+
 ### Notlarım
 
 Expo kullanmak her ne kadar demo projenin geliştirme ve test aşamasında çok fazla kolaylık sağlamış olsa da karşıma çeşitli sorunlar çıkardı. Bu sorunların üstüne gitmek proje teslimini geciktirecekti. Bazılarında yetenek çıkarımı yapılamıyor, bu nedenle atlamak için kendimi kolayca ikna ettim.

@@ -4,7 +4,7 @@ Beije Software Developer Internship için yapılan case çalışmasıdır. Expo 
 
 Çalıştırmak için [Expo Installation](https://docs.expo.dev/get-started/installation/) sayfasındaki gereklilikler sağlanmış olmalıdır. Sonrasında ise `npx expo start` komutu ile proje dizininde çalıştırılabilir.
 
-[![Preview Video](https://img.youtube.com/vi/A_chwOd5XsI/0.jpg)](https://www.youtube.com/watch?v=A_chwOd5XsI)
+[![Preview Video](https://img.youtube.com/vi/A_chwOd5XsI/0.jpg)](https://www.youtube.com/watch?v=A_chwOd5XsI 'Demo Video İçin Tıkla :)')
 
 ### Notlarım
 
